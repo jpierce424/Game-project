@@ -1,0 +1,258 @@
+   
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Game_using_class
+{
+    public class Program
+    {
+       static void Main(string[] args)
+        {
+
+            
+            Random roll = new Random();
+            int random1 = roll.Next(1, 11);
+            int random2 = roll.Next(1, 11);
+            int random3 = roll.Next(1, 11);
+            int random4 = roll.Next(1, 11);
+
+            Random Luck = new Random();
+            int YourLuck = Luck.Next(1, 2);
+
+
+
+            Console.WriteLine("Welcome");
+            Console.WriteLine("How many players will be playing");
+            Console.Write("1, 2, 3, 4 : ");
+            string players = Console.ReadLine();
+            Console.WriteLine($"there are {players} players playing.");
+
+            //1 player
+            if (players == "1")
+            {
+                Console.Write("What is your name: ");
+                string name1 = Console.ReadLine();
+                Console.WriteLine($"Hello {name1} ");
+                Console.Write("How old are you: ");
+                string age1 = Console.ReadLine();
+                Console.WriteLine($"You are {age1} years old");
+                //Score 1 spin
+                Console.WriteLine("Lets see how Lucky you are");
+                Console.Write("player 1 press enter to spin: ");
+                string player1score = Console.ReadLine();
+                Console.WriteLine($"Player 1 rolled {random1 + YourLuck}");
+
+            }
+
+
+
+
+            //______________________________________________________________________________________________________________
+            //2 players
+            else if (players == "2")
+            {
+                Console.Write("What is your 1st players name: ");
+                string name1 = Console.ReadLine();
+                Console.WriteLine($"Hello {name1} ");
+                Console.Write("How old are you: ");
+                string age1 = Console.ReadLine();
+                Console.WriteLine($"You are {age1} years old");
+
+                Console.Write("What is your 2nd players name: ");
+                string name2 = Console.ReadLine();
+                Console.WriteLine($"Hello {name2} ");
+                Console.Write("How old are you: ");
+                string age2 = Console.ReadLine();
+                Console.WriteLine($"You are {age2} years old");
+                // player 1 spin
+                Console.WriteLine("Lets see how Lucky you are");
+                Console.Write("player 1 press enter to spin: ");
+                string player1score = Console.ReadLine();
+                Console.WriteLine($"Player 1 rolled {random1 + YourLuck}");
+
+                // player 2 sipn
+                Console.Write("player 2 press enter to spin: ");
+                string player2score = Console.ReadLine();
+                Console.WriteLine($"Player 2 rolled {random2 + YourLuck}");
+
+                //score for 2 players
+                if (random1 + YourLuck > random2 + YourLuck)
+                {
+                    Console.WriteLine($"{name1} wins");
+                }
+
+                else if (random1 + YourLuck < random2 + YourLuck)
+                {
+                    Console.WriteLine($"{name2} wins");
+                }
+                else
+                {
+                    Console.WriteLine("You both got the same number");
+                }
+
+            }
+
+
+            //______________________________________________________________________________________________________________
+            // 3 players
+            else if (players == "3")
+            {
+                Console.Write("What is your 1st players name: ");
+                string name1 = Console.ReadLine();
+                Console.WriteLine($"Hello {name1} ");
+                Console.Write("How old are you: ");
+                string age1 = Console.ReadLine();
+                Console.WriteLine($"You are {age1} years old");
+
+                Console.Write("What is your 2nd players name: ");
+                string name2 = Console.ReadLine();
+                Console.WriteLine($"Hello {name2} ");
+                Console.Write("How old are you: ");
+                string age2 = Console.ReadLine();
+                Console.WriteLine($"You are {age2} years old");
+
+                Console.Write("What is your 3rd players name: ");
+                string name3 = Console.ReadLine();
+                Console.WriteLine($"Hello {name3} ");
+                Console.Write("How old are you: ");
+                string age3 = Console.ReadLine();
+                Console.WriteLine($"You are {age3} years old");
+                // player 1 spin
+                Console.WriteLine("Lets see how Lucky you are");
+                Console.Write("player 1 press enter to spin: ");
+                string player1score = Console.ReadLine();
+                Console.WriteLine($"Player 1 rolled {random1 + YourLuck}");
+
+                // player 2 spin
+                Console.Write("player 2 press enter to spin: ");
+                string player2score = Console.ReadLine();
+                Console.WriteLine($"Player 2 rolled {random2 + YourLuck}");
+
+                // player 3 spin
+                Console.Write("player 3 press enter to spin: ");
+                string player3score = Console.ReadLine();
+                Console.WriteLine($"Player 3 rolled {random3 + YourLuck}");
+
+                // score for 3 players
+                if (random1 + YourLuck > random2 + YourLuck && random1 + YourLuck > random3 + YourLuck)
+                {
+                    Console.WriteLine($"{name1} wins");
+                }
+
+                else if (random2 + YourLuck > random1 + YourLuck && random2 + YourLuck > random3 + YourLuck)
+                {
+                    Console.WriteLine($"{name2} wins");
+                }
+
+                else if (random3 + YourLuck > random1 + YourLuck && random3 + YourLuck > random2 + YourLuck)
+                {
+                    Console.WriteLine($"{name3} wins");
+                }
+
+                else
+                {
+                    Console.WriteLine("It was a tie try again next time");
+                }
+
+
+            }
+
+
+
+
+
+
+
+            //______________________________________________________________________________________________________________
+            //4 players
+            else if (players == "4")
+            {
+                Console.Write("What is your 1st players name: ");
+                string name1 = Console.ReadLine();
+                Console.WriteLine($"Hello {name1} ");
+                Console.Write("How old are you: ");
+                string age1 = Console.ReadLine();
+                Console.WriteLine($"You are {age1} years old");
+
+                Console.Write("What is your 2nd players name: ");
+                string name2 = Console.ReadLine();
+                Console.WriteLine($"Hello {name2} ");
+                Console.Write("How old are you: ");
+                string age2 = Console.ReadLine();
+                Console.WriteLine($"You are {age2} years old");
+
+                Console.Write("What is your 3rd players name: ");
+                string name3 = Console.ReadLine();
+                Console.WriteLine($"Hello {name3} ");
+                Console.Write("How old are you: ");
+                string age3 = Console.ReadLine();
+                Console.WriteLine($"You are {age3} years old");
+
+                Console.Write("What is your 4th players name: ");
+                string name4 = Console.ReadLine();
+                Console.WriteLine($"Hello {name4} ");
+                Console.Write("How old are you: ");
+                string age4 = Console.ReadLine();
+                Console.WriteLine($"You are {age4} years old");
+
+                // player 1 spin
+                Console.WriteLine("Lets see how Lucky you are");
+                Console.Write("player 1 press enter to spin: ");
+                string player1score = Console.ReadLine();
+                Console.WriteLine($"Player 1 rolled {random1 + YourLuck}");
+
+                // player 2 spin
+                Console.Write("player 2 press enter to spin: ");
+                string player2score = Console.ReadLine();
+                Console.WriteLine($"Player 2 rolled {random2 + YourLuck}");
+
+                // player 3 spin
+                Console.Write("player 3 press enter to spin: ");
+                string player3score = Console.ReadLine();
+                Console.WriteLine($"Player 3 rolled {random3 + YourLuck}");
+
+                // player 4 spin
+                Console.Write("player 4 press enter to spin: ");
+                string player4score = Console.ReadLine();
+                Console.WriteLine($"Player 4 rolled {random4 + YourLuck}");
+
+                // score for 4 players
+                if (random1 + YourLuck > random2 + YourLuck && random1 + YourLuck > random3 + YourLuck && random1 + YourLuck > random4 + YourLuck)
+                {
+                    Console.WriteLine($"{name1} wins");
+                }
+
+                else if (random2 + YourLuck > random1 + YourLuck && random2 + YourLuck > random3 + YourLuck && random2 + YourLuck > random4 + YourLuck)
+                {
+                    Console.WriteLine($"{name2} wins");
+                }
+
+                else if (random3 + YourLuck > random1 + YourLuck && random3 + YourLuck > random2 + YourLuck && random3 + YourLuck > random4 + YourLuck)
+                {
+                    Console.WriteLine($"{name3} wins");
+                }
+
+                else if (random4 + YourLuck > random1 + YourLuck && random4 + YourLuck > random2 + YourLuck && random4 + YourLuck > random3 + YourLuck)
+                {
+                    Console.WriteLine($"{name4} wins");
+                }
+
+                else
+                {
+                    Console.WriteLine("It was a tie try again next time");
+                }
+
+
+
+
+            }
+            
+
+            Console.ReadKey();
+
+        }
+    }
+}
